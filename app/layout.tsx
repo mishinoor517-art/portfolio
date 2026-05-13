@@ -24,8 +24,8 @@ export default function RootLayout({
       className={`${font.className} h-full antialiased`}
     >
     <body className="min-h-full flex flex-col bg-[#0d0d1f]">
-        {children}
-      </body>
+      {children}
+    </body>
     </html>
   );
 }

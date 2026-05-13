@@ -1,15 +1,9 @@
-import React from "react";
+import Home from './components/Home/Home'
 
-function page() {
+export default function HomePage() {
   return (
-    <div>
-      <h1>hello maryam</h1>
-      <p>
-        lorem ipsum dolor sit amet consectetur
-         adipisicing elit. Quisquam, quod.
-      </p>
+    <div className="text-white">
+      <Home />
     </div>
   );
 }
-
-
