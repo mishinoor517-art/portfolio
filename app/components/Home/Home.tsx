@@ -13,16 +13,20 @@ import Contact from './Contact/Contact'
 function Home() {
   return (
     <div className='relative min-h-screen overflow-hidden bg-[#070812]'>
-      <ParticleBackground />
-      <Nav />
-      <Horo/>
-      <Services/>
-      <Resume/>
-      <Project/>
-      <Skill/>
-      <ClintReview/>
-      <Blog/>
-      <Contact/>
+      <div className='absolute inset-0 z-0'>
+        <ParticleBackground />
+      </div>
+      <div className='relative z-20'>
+        <Nav />
+        <Horo/>
+        <Services/>
+        <Resume/>
+        <Project/>
+        <Skill/>
+        <ClintReview/>
+        <Blog/>
+        <Contact/>
+      </div>
     </div>
   )
 }

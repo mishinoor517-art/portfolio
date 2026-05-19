@@ -10,14 +10,14 @@ const Contact = () => {
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
         {/* LEFT SIDE */}
-        <div className="animate-[fadeIn_1s_ease-in-out]">
+        <div>
 
           <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-white leading-snug animate-pulse">
             Schedule call with me <br />
             to see if I can help you with your project.
           </h1>
 
-          <p className="mt-5 text-white/70 text-sm sm:text-base animate-[fadeIn_1.5s_ease-in-out]">
+          <p className="mt-5 text-white/70 text-sm sm:text-base">
             Let’s connect through any of the platforms below. I am available for freelance
             work, collaboration and web development projects.
           </p>
@@ -65,8 +65,7 @@ const Contact = () => {
         </div>
 
         {/* RIGHT SIDE FORM */}
-        <div className="bg-white/10 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-lg shadow-lg
-                        animate-[float_4s_ease-in-out_infinite]">
+        <div className="bg-white/10 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-lg shadow-lg">
 
           <h2 className="text-xl sm:text-2xl font-semibold text-white text-center mb-6 animate-pulse">
             Send Message
