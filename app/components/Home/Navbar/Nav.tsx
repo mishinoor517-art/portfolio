@@ -11,22 +11,19 @@ function Nav() {
   }
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold">
+            <Link href="/" className="text-lg sm:text-xl font-bold">
               Maryam&apos;s Portfolio
             </Link>
           </div>
 
           {/* Center: Maryam's name and Navigation Menu */}
-          <div className="hidden md:flex flex-col items-center">
-            {/* <div className="text-lg font-semibold mb-1">
-              Maryam
-            </div> */}
-            <div className="flex items-baseline space-x-4">
+          <div className="hidden md:flex flex-wrap items-center justify-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               <Link href="/" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                 Home
               </Link>
@@ -52,7 +49,7 @@ function Nav() {
           </div>
 
           {/* Right: Download Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all duration-300 transform hover:scale-105 shadow-lg">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>

@@ -14,52 +14,56 @@ const ParticleBackground = () => {
 
     let animationFrameId: number
     const particles: { x: number; y: number; vx: number; vy: number; radius: number }[] = []
-    const particleCount = 70
+    const particleCount = 85
     const lineDistance = 140
+    const mouse = { x: -1000, y: -1000 }
+    const dpr = window.devicePixelRatio || 1
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+      canvas.style.width = `${window.innerWidth}px`
+      canvas.style.height = `${window.innerHeight}px`
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     }
 
     const initParticles = () => {
       particles.length = 0
       for (let i = 0; i < particleCount; i += 1) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.6,
-          vy: (Math.random() - 0.5) * 0.6,
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
           radius: 1.5 + Math.random() * 1.8,
         })
       }
     }
 
     const draw = () => {
-      if (!ctx) return
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      ctx.fillStyle = 'rgba(255,255,255,0.9)'
+      ctx.fillStyle = 'rgba(255,255,255,0.85)'
 
       for (const particle of particles) {
         particle.x += particle.vx
         particle.y += particle.vy
 
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
+        if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1
+        if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1
 
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
         ctx.fill()
       }
 
-      ctx.strokeStyle = 'rgba(255,255,255,0.14)'
+      ctx.strokeStyle = 'rgba(255,255,255,0.18)'
       ctx.lineWidth = 1
 
       for (let i = 0; i < particles.length; i += 1) {
         for (let j = i + 1; j < particles.length; j += 1) {
           const dx = particles[i].x - particles[j].x
           const dy = particles[i].y - particles[j].y
-          const distance = Math.sqrt(dx * dx + dy * dy)
+          const distance = Math.hypot(dx, dy)
           if (distance < lineDistance) {
             ctx.globalAlpha = 1 - distance / lineDistance
             ctx.beginPath()
@@ -67,6 +71,18 @@ const ParticleBackground = () => {
             ctx.lineTo(particles[j].x, particles[j].y)
             ctx.stroke()
           }
+        }
+      }
+
+      const mouseRadius = 120
+      for (const particle of particles) {
+        const dx = particle.x - mouse.x
+        const dy = particle.y - mouse.y
+        const distance = Math.hypot(dx, dy)
+        if (distance < mouseRadius) {
+          const force = (mouseRadius - distance) / mouseRadius
+          particle.vx += (dx / distance) * force * 0.3
+          particle.vy += (dy / distance) * force * 0.3
         }
       }
       ctx.globalAlpha = 1
@@ -77,13 +93,26 @@ const ParticleBackground = () => {
       animationFrameId = requestAnimationFrame(animate)
     }
 
+    const handleResize = () => {
+      resizeCanvas()
+      initParticles()
+    }
+
+    const handleMouseMove = (event: MouseEvent) => {
+      mouse.x = event.clientX
+      mouse.y = event.clientY
+    }
+
     resizeCanvas()
     initParticles()
     animate()
 
-    window.addEventListener('resize', resizeCanvas)
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('mousemove', handleMouseMove)
+
     return () => {
-      window.removeEventListener('resize', resizeCanvas)
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('mousemove', handleMouseMove)
       cancelAnimationFrame(animationFrameId)
     }
   }, [])
