@@ -5,7 +5,7 @@ import { BiBadge } from 'react-icons/bi'
 
 const Resume = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#070812]">
+    <section id="resume" className="scroll-mt-24 py-16 px-4 sm:px-6 lg:px-8 bg-[#070812]">
       <div className="max-w-6xl mx-auto space-y-16">
 
         {/* Experience Section */}
@@ -22,15 +22,21 @@ const Resume = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <ResumeCard
               Icon={Briefcase}
-              role="Design Institute of Technology"
+              role="Internship at Design Institute"
+              date="2024 - Present"
+              description="Gained hands-on experience with modern design principles and web development practices. Worked on real-world projects and collaborated with senior developers."
             />
             <ResumeCard
               Icon={Layers}
               role="Frontend Developer"
+              date="2024 - Present"
+              description="Developing responsive and interactive web applications using React.js, Next.js, Tailwind CSS, and modern frontend technologies for optimal user experience."
             />
             <ResumeCard
               Icon={Database}
               role="Backend Developer"
+              date="2024 - Present"
+              description="Building scalable REST APIs, managing databases, implementing authentication, and developing robust backend solutions using Node.js, Express.js, and MongoDB."
             />
           </div>
         </div>
@@ -51,16 +57,19 @@ const Resume = () => {
               Icon={Code2}
               role="Design Institute of Technology"
               date="Jan 2023-Dec 2024"
+              description="Completed specialized training in UI/UX design. Learned wireframing, prototyping, user research, and design systems using industry-standard tools like Figma."
             />
             <ResumeCard
               Icon={Layers}
               role="Bachelor in Computer Science"
               date="Jan 2019 - Dec 2022"
+              description="Strong foundation in computer science fundamentals, data structures, algorithms, web development, and software engineering principles."
             />
             <ResumeCard
               Icon={Database}
               role="Certificate in Digital Marketing"
               date="Jan 2016 - Dec 2018"
+              description="Expertise in SEO, social media marketing, content strategy, analytics, and digital advertising to drive online business growth."
             />
           </div>
         </div>

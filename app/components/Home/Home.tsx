@@ -16,7 +16,7 @@ function Home() {
       <div className='absolute inset-0 z-0'>
         <ParticleBackground />
       </div>
-      <div className='relative z-20'>
+      <div id="home" className='relative z-20'>
         <Nav />
         <Horo/>
         <Services/>

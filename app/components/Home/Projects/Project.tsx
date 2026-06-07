@@ -3,30 +3,36 @@ import Image from 'next/image'
 
 const projects = [
   {
-    title: 'Modern Finance Dashboard UI',
-    category: 'app, UI/UX',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+    title: "Modern Finance Dashboard UI",
+    category: "App, UI/UX",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: 'E-Commerce Website Design',
-    category: 'web, UI/UX',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    title: "E-Commerce Website Design",
+    category: "Web, UI/UX",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: 'Mobile Banking App UI',
-    category: 'app, UI/UX',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d',
+    title: "Mobile Banking App UI",
+    category: "App, UI/UX",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: 'Analytics Dashboard System',
-    category: 'dashboard, data viz',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984',
+    title: "Analytics Dashboard System",
+    category: "Dashboard, Data Visualization",
+    image:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80",
   },
-]
+];
+
+
 
 const Project = () => {
   return (
-    <section className="pt-16 pb-16">
+    <section id="works" className="scroll-mt-24 pt-16 pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         <h1 className="text-center text-2xl md:text-4xl lg:text-5xl font-bold text-white">

@@ -16,13 +16,13 @@ const ClientReview = () => {
       name: 'Ali Khan',
       review:
         'The work was absolutely amazing and very professional. Everything was delivered on time with perfect quality.',
-      image: 'https://i.pravatar.cc/150?img=1',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
     },
     {
       name: 'Sara Ahmed',
       review:
         'Very smooth experience. The design was modern, clean and exactly what I needed for my project.',
-      image: 'https://i.pravatar.cc/150?img=2',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
     },
     {
       name: 'John Doe',
@@ -39,7 +39,7 @@ const ClientReview = () => {
   }
 
   return (
-    <div className="pt-16 pb-16 bg-black">
+    <div id="testimonial" className="scroll-mt-24 pt-16 pb-16 bg-black">
 
       {/* HEADING */}
       <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12">

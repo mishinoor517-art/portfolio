@@ -1,37 +1,35 @@
-import React from 'react'
-import { LucideIcon } from 'lucide-react'
+import React from "react";
 
-type Props = {
-  role: string
-  Icon: LucideIcon
-  date?: string
-}
+type ResumeCardProps = {
+  Icon: React.ElementType;
+  role: string;
+  date: string;
+  description: string;
+};
 
-const ResumeCard = ({ Icon, role, date }: Props) => {
+const ResumeCard: React.FC<ResumeCardProps> = ({
+  Icon,
+  role,
+  date,
+  description,
+}) => {
   return (
-    <div className="mb-6">
-      <div className="flex flex-col gap-4 bg-blue-950/20 transition-all duration-300 p-4 sm:p-6 rounded-3xl sm:flex-row sm:items-start">
-        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-blue-950 rounded-full flex items-center justify-center">
-          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-        </div>
-        <div className="flex-1 space-y-3">
-          {date && (
-            <div>
-              <span className="inline-flex items-center rounded-full bg-gray-200 px-4 py-1 text-sm font-semibold text-gray-600 sm:text-base">
-                {date}
-              </span>
-            </div>
-          )}
-          <h1 className="text-white text-base sm:text-lg font-semibold">
-            {role}
-          </h1>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est architecto minima numquam fugiat rerum iure.
-          </p>
-        </div>
+    <div className="flex gap-4 p-6 border border-slate-700 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+      {/* Icon */}
+      <div className="text-cyan-400 flex-shrink-0">
+        <Icon size={28} />
+      </div>
+
+      {/* Content */}
+      <div>
+        <h3 className="text-lg font-semibold text-white">{role}</h3>
+        <p className="text-sm text-cyan-300">{date}</p>
+        <p className="mt-2 text-gray-300 text-sm leading-relaxed">
+          {description}
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ResumeCard
+export default ResumeCard;

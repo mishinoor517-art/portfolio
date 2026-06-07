@@ -3,7 +3,7 @@ import ServiceCard from './ServiceCard'
 
 const Services = () => {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-[#070812]">
+    <div id="services" className="scroll-mt-24 py-16 px-4 sm:px-6 lg:px-8 bg-[#070812]">
         <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 leading-tight">
             Collaborate with Brand<br />Agencies to create <br />impactful results</h1>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-16">

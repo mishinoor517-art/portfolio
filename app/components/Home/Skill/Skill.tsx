@@ -37,7 +37,7 @@ const item = {
 
 const Skill = () => {
   return (
-    <div className="pt-16 pb-16">
+    <div id="skill" className="scroll-mt-24 pt-16 pb-16">
 
       <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12">
         My <span className="text-cyan-300">Skills</span>

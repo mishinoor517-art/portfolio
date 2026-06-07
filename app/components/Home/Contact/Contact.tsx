@@ -5,7 +5,7 @@ import { FaWhatsapp, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-[#0f172a] flex items-center justify-center px-4 sm:px-6 py-16">
+    <div id="contact" className="scroll-mt-24 min-h-screen bg-[#0f172a] flex items-center justify-center px-4 sm:px-6 py-16">
 
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="relative z-10 min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 flex flex-col items-center max-w-3xl w-full">
-          <Image src="/images/profile.jpg" alt="Profile" width={160} height={160} className="w-40 h-40 sm:w-44 sm:h-44 rounded-full mb-4 border-4 border-white shadow-lg" />
+          <Image src="/profile image4.avif" alt="Maryam profile picture" width={160} height={160} className="w-40 h-40 sm:w-44 sm:h-44 rounded-full mb-4 border-4 border-white shadow-lg" />
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-6 text-center font-bold tracking-wide leading-tight">
             Creating Web Products,<br />
             Brands<span className="text-cyan-200"> and experiences</span>
