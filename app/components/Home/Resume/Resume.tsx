@@ -69,7 +69,7 @@ const Resume = () => {
               Icon={Database}
               role="Certificate in Digital Marketing"
               date="Jan 2024 - Dec 2024"
-              description="Expertise in SEO, social media marketing, content strategy, analytics, and digital advertising to drive online business growth."
+              description="Learned fundamentals of online marketing including social media, content creation, email marketing, and basic digital advertising strategies."
             />
           </div>
         </div>
