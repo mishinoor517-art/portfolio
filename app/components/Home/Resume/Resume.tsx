@@ -23,19 +23,19 @@ const Resume = () => {
             <ResumeCard
               Icon={Briefcase}
               role="Internship at Design Institute"
-              date="2024 - Present"
+              date="2025 - Present"
               description="Gained hands-on experience with modern design principles and web development practices. Worked on real-world projects and collaborated with senior developers."
             />
             <ResumeCard
               Icon={Layers}
               role="Frontend Developer"
-              date="2024 - Present"
+              date="2025 - Present"
               description="Developing responsive and interactive web applications using React.js, Next.js, Tailwind CSS, and modern frontend technologies for optimal user experience."
             />
             <ResumeCard
               Icon={Database}
               role="Backend Developer"
-              date="2024 - Present"
+              date="2025 - Present"
               description="Building scalable REST APIs, managing databases, implementing authentication, and developing robust backend solutions using Node.js, Express.js, and MongoDB."
             />
           </div>
@@ -68,7 +68,7 @@ const Resume = () => {
             <ResumeCard
               Icon={Database}
               role="Certificate in Digital Marketing"
-              date="Jan 2016 - Dec 2018"
+              date="Jan 2024 - Dec 2024"
               description="Expertise in SEO, social media marketing, content strategy, analytics, and digital advertising to drive online business growth."
             />
           </div>

@@ -26,7 +26,7 @@ const Contact = () => {
           <div className="mt-8 space-y-6">
 
             <a
-              href="https://wa.me/923001234567"
+              href="https://wa.me/92388784695"
               target="_blank"
               className="flex items-center gap-3 text-white transition-all duration-300 hover:text-green-400 hover:translate-x-2 hover:scale-105"
             >
@@ -35,7 +35,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/maham-noor-b2a727414/"
               target="_blank"
               className="flex items-center gap-3 text-white transition-all duration-300 hover:text-blue-400 hover:translate-x-2 hover:scale-105"
             >
@@ -44,7 +44,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="mailto:yourname@gmail.com"
+              href="mailto:mishinoor517@gmail.com"
               className="flex items-center gap-3 text-white transition-all duration-300 hover:text-red-400 hover:translate-x-2 hover:scale-105"
             >
               <FaEnvelope className="text-xl sm:text-2xl animate-bounce" />
